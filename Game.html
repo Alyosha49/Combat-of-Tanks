@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel = "icon" href = "ВЗРЫВ.jpg">
     <title>Tank combat</title>
     <style>
         body {
@@ -26,12 +27,34 @@
             font-size: 19px;
             padding: 20px;
         }
+        img {
+            top: 800 / 2;
+            left: 400 * 2;
+        }
     </style>
 </head>
 <body>
-<blockquote>
-    <h1>ПРАВИЛА ИГРЫ</h1>
-    <h2>Игра на два игрока. Первый управляет клавишами W (вверх), S (вниз) и пробел для стрельбы. А второй стрелками вверх, вниз и enter для стрельбы.</h2>
-</blockquote>
+<img width = 200 height = 150 src = "Б.jpg">
+<script src = "jquery-2.1.0.js"></script>
+<script>
+    function Tank(x, y, url){
+        this.x = x
+        this.y = y
+        this.url = url
+    };
+    Tank.prototype.draw = function (){
+        var tankHtml = "<img src = '" + this.url + "'>"
+        var tankElement = $(tankHtml)
+        this.tankElement.css({
+            position: "absolute",
+            left: this.x,
+            top: this.y
+        })
+        $("body").append(tankElement)
+    };
+    tank1 = Tank(400, 10, "https://yandex.ru/images/search?text=танк%20png&img_url=https%3A%2F%2Fwww.picpng.com%2Fimages%2Flarge%2Ftanks-image-download-39740&pos=14&rpt=simage")
+    tank1.draw()
+</script>
+
 </body>
 </html>
