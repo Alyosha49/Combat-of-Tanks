@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel = "icon" href = "ВЗРЫВ.jpg">
+    <link rel = "icon" href = "Combat%20of%20tanks%20logo.png">
     <title>Combat of Tanks</title>
     <style>
         body {
@@ -53,14 +53,14 @@
         $("body").append(this.tankElement);
     };
     Tank.prototype.moveTop = function () {
-        this.y -= 3
+        this.y -= 10
         this.tankElement.css({
             top: this.y,
             left: this.x
         })
     };
     Tank.prototype.moveDown = function(){
-        this.y += 1
+        this.y += 10
         this.tankElement.css({
             top: this.y,
             left: this.x
@@ -80,21 +80,27 @@
     var tank1 = new Tank(400, 10, "tank.png")
     var tank2 = new Tank(400 + 500, 10, "Танк.jpg");
     var keyActions = {
-        38: "Up2",
-        40: "Down2",
         87: "Up",
         83: "Down"
     }
+    var keyActions2 = {
+        38: "Up2",
+        40: "Down2"
+        }
     $("body").keydown(function (event) {
         var direction = keyActions[event.keyCode];
         tank1.setDirection(direction)
-        tank2.setDirection(direction)
+    });
+    $("body").keydown(function (event) {
+        var direction2 = keyActions2[event.keyCode];
+        tank2.setDirection(direction2)
     });
     setInterval(function (){
     tank1.draw();
-    tank2.draw()
-    }, 30)
+    tank2.draw();
+    }, 15)
+    if (tank1.x < 1){direction = "Down"
+    } else if (tank1 > 500){direction = "Up"}
 </script>
-
 </body>
 </html>

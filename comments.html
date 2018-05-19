@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Combat of Tanks</title>
-        <link rel="icon" href="ВЗРЫВ.jpg">
+        <link rel="icon" href="Combat%20of%20tanks%20logo.png">
         <style>
             body {
                 font-family: sans-serif;
@@ -35,10 +35,9 @@
     <body>
         <h1>COMBAT OF TANKS</h1>
         <a href = "index.html"><div>Назад</div></a>
-            <h3>Введите комментарий</h3>
-                <textarea name = "comment" rows = "5">
-                     ...
-                </textarea><br>
+        <form action = "comment.html" method = "POST"> 
+        <h3>Введите комментарий</h3>
+                <textarea name = "comment" rows = "5"></textarea><br>
                 <h3>Оцените</h3>
                 <select multiple name = "Оценка" size = "3">
                     <option value = "Отлично">Отлично!</option>
@@ -48,5 +47,6 @@
                     <option value = "Ужасно">Ужасно</option>
                 </select><br>
                 <br><input type = "submit">
+                 </form>
     </body>
 </html>
