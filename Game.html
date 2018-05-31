@@ -5,7 +5,7 @@
     <title>Combat of Tanks</title>
     <style>
         body {
-            background-color: #717171;
+            background: #ffffff;
             font-family: sans-serif
         }
         blockquote {
@@ -94,7 +94,7 @@
     $("body").keydown(function (event) {
         var direction2 = keyActions2[event.keyCode];
         tank2.setDirection(direction2)
-    });
+    }); 
     setInterval(function (){
     tank1.draw();
     tank2.draw();
